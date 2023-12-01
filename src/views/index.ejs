@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Documentación API</h1>
+    <h2>Usuarios</h2>
+    <h3>Registrar Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">1</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Registrar Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/registrar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra ingresar nuevos usuarios al sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">POST</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200 OK<br>
+                        •   Body: <br>
+                        { <br>
+                         "message": "Se registro con exito el Usuario"<br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se registro el Usuario"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Buscar Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">2</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Buscar Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/buscar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra buscar nuevos usuarios al sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •  <br>
+                        • <br>
+                        { <br>
+                        <br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se encontro el Usuario"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Listar Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">3</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Listar Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/listar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra listar los usuarios registrados del sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        • 
+                        • 
+                        { <br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se Listo los Usuarios"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Actualizar Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">4</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Actualizar Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/actualizar/:idr</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra actualizar los usuarios registrados del sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td class="main-td">Request bodyform-data</td>
+                        <td class="sub-td">Correcto:<br>
+                            •   Status: 200 OK<br>
+                            •   Body: <br>
+                            { <br>
+                             "message": "Se actualizo con exito el Usuario"<br>
+                            } <br>
+                             </td>
+                    </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se actualizo el Usuario"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Eliminar Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">5</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Eliminar Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/eliminar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra Eliminar los usuarios registrados del sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">DELETE</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td class="main-td">Request bodyform-data</td>
+                        <td class="sub-td">Correcto:<br>
+                            •   Status: 200 OK<br>
+                            •   Body: <br>
+                            { <br>
+                             "message": "Se elimino con exito el Usuario"<br>
+                            } <br>
+                             </td>
+                    </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se elimino el Usuario"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>CambiarEstado Usuario</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">6</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">CambiarEstado Usuario</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/usuario/cambiarestado</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra cambiar el estado de los usuarios registrados del sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td class="main-td">Request bodyform-data</td>
+                        <td class="sub-td">Correcto:<br>
+                            •   Status: 200 OK<br>
+                            •   Body: <br>
+                            { <br>
+                             "message": "Se actualizó con éxito el estado del usuario"<br>
+                            } <br>
+                             </td>
+                    </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se encontró el usuario con la identificación proporcionada"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h2>Maquinas</h2>
+    <h3>Registrar Maquina</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">7</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Registrar maquina</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/maquina/registrar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra ingresar nuevos maquinas al sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">POST</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200 OK<br>
+                        •   Body: <br>
+                        { <br>
+                         "message": "Se registró con éxito la máquina"<br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " No se registró la máquina"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+
+    <h3>Buscar Maquina</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">8</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Bucar maquinaa deseadas</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/maquina/buscar/id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra buscar una maquina especifica por su ID</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">
+                        Administrador <br>
+                        Usuarios
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200<br>
+                        •   Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    
+                    <td class="sub-td der-bot">
+                        {<br>
+                            "id_maquina": 2,<br>
+                            "nombre": "cafetera",<br>
+                            "marca": "Haced",<br>
+                            "placa": "123124",<br>
+                            "modelo": "2015",<br>
+                            "cantidad": 1,<br>
+                            "manual": "nulo",<br>
+                            "serial": "12321213",<br>
+                            "imagen": "a.png",<br>
+                            "descripcion": "electrodomestico para hacer cafe",<br>
+                            "estado": "activo",<br>
+                            "id_usuario": 4,<br>
+                            "id_area": 1,<br>
+                            "id_ambiente": 1,<br>
+                            "estado_maquina": "baja"<br>
+                        }<br>
+                        No autorizado:<br>
+                        •   Status: 500 Internal Server Error<br>
+                        •   Body:<br>
+                        {<br>
+                            "message": " Error en el servidor"<br>
+                        }
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+
+    <h3>Actualizar Maquina</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">9</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Actualizar Maquina</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/maquina/actualizar/id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra actualizar una maquina, siempre y cuando ingrese su ID</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Parameter: {id}<BR>
+                        Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200 OK<br>
+                        •   Body: <br>
+                                 "message": "Se actualizó con éxito la máquina"<br>
+                        </td> 
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td der-bot">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                   •    Status: 404<br>
+                   •    Body:<br>
+                    {<br>
+                        "message": " No se actualizó la máquina"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    &nbsp;• Status: 500<br>
+                    &nbsp;• Body:<br>
+                    {<br>
+                        &nbsp;"message": " Error en el servidor"<br>
+                    }
+                                        
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div> 
+    <h3>Dar de baja la maquina</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">10</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Dar de baja la maquina</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/maquina/debaja/id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra dar de baja una maquina, utilizando su ID que lo identificara como unico</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Parameter: {id}<BR>
+                        Authorization Bearer {TOKEN}        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200 OK<br>
+                        •   Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td der-bot">{<br>
+                        "message": "Se dio de baja la máquina con éxito"<br>
+                    }<br><br>                    
+                    Incorrecto:<br>
+                    •   Status: 400<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se encontró la máquina para dar de baja"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    &nbsp;• Status: 500 Internal Server Error<br>
+                    &nbsp;• Body:<br>
+                    {<br>
+                        &nbsp;"message": " Error en el servidor"<br>
+                    }                    
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>        
+
+    <h3>Listar Maquina</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">11</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Listar todas las maquinas registradas en el sistema</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/maquina/listar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">Los uruarios podran listar todas las maquinas que se encuentres en el sitema cada una con su caracteristica especifica</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>     
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">
+                        Administrador <br>
+                        Cliente</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •   Status: 200 <br>
+                        •   Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td der-bot">
+                        [<br>
+                            {<br>
+                                "id_maquina": 2,   <br>
+                                "nombre": "lava",<br>
+                                "marca": "yamaha",<br>
+                                "placa": "123124",<br>
+                                "modelo": "2015",<br>
+                                "cantidad": 1,<br>
+                                "manual": "este manual es requerido",<br>
+                                "serial": "12321213",<br>
+                                "imagen": "a.png",<br>
+                                "descripcion": "arrozdsf",<br>
+                                "estado": "activo",<br>
+                                "id_usuario": 4,<br>
+                                "id_area": 1,<br>
+                                "id_ambiente": 1,<br>
+                                "estado_maquina": "baja"<br>
+                               },<br>
+                              {<br>
+                                "id_maquina": 3,<br>
+                                "nombre": "lavadoradfd",<br>
+                                "marca": "yamaha",<br>
+                                "placa": "123124",<br>
+                                "modelo": "2015",<br>
+                                "cantidad": 1,<br>
+                                "manual": "este manual es requerido",<br>
+                                "serial": "12321213",<br>
+                                "imagen": "a.png",<br>
+                                "descripcion": "arrozdsf",<br>
+                                "estado": "activo",<br>
+                                "id_usuario": 4,<br>
+                                "id_area": 1,<br>
+                                "id_ambiente": 1,<br>
+                                "estado_maquina": "baja"<br>
+                            },<br>
+
+                    No autorizado:<br>
+                    &nbsp;• Status: 500<br>
+                    &nbsp;• Body:<br>
+                    {<br>
+                        &nbsp;"message": " Error en el controlador maquina"<br>
+                    }
+                    <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+   
+
+    <h2>Mantenimiento</h2>
+    <h3>Registrar Mantenimiento</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">12</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Registrar mantenimiento</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/mantenimiento/registrar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra registrar un nuevo mantenimiento.</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">POST</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">
+                        {<br>
+                            "fecha_mantenimiento":"2023-10-03",<br>
+                            "hora_mantenimiento":"10:53:25",<br>
+                            "descripcion":"sdgsdfsd",<br>
+                            "tipo_mantenimiento":"preventivo",<br>
+                            "id_maquina":3,<br>
+                            "id_usuario":3 <br>
+                        } <br>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">{<br>
+                        "message": "Se registró el mantenimiento"<br>
+                    }<br><br>
+                    Incorrecto:<br>
+                    •	Status: 400<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": " NO se registró el mantenimiento"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •	Status: 500<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Listar Mantenimiento</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">13</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Listar todos los mantenimientos registrados</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/mantenimiento/listar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra listar todos los mantenimientos registrados en el sistema</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td"></td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador, usuarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">No aplica</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">
+                        {<br>
+                            "id_mantenimiento": 5,<br>
+                            "fecha_mantenimiento": "2023-10-03T05:00:00.000Z",<br>
+                            "hora_mantenimiento": "10:53:25",<br>
+                            "descripcion": "manteniminto realizado",<br>
+                            "tipo_mantenimiento": "preventivo",<br>
+                            "id_maquina": 3,<br>
+                            "id_usuario": 3 <br>
+                        } <br>
+                        No autorizado:<br>
+                        •	Status: 500<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": " Error en listar mantenimientos"<br>
+                        }
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    
+    <h3>Actualizar manteniminto</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">14</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Actualizar mantenimiento </td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/mantenimiento/actualizar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra actualizar un mantenimiento con el ID.</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Parameter: {id}<BR>
+                        Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">
+                        { <br>
+                        "fecha_mantenimiento":"2023-10-03", <br>
+                        "hora_mantenimiento":"10:53:25", <br>
+                        "descripcion":"manteniminto realizado", <br>
+                        "tipo_mantenimiento":"preventivo", <br>
+                        "id_maquina":3,<br>
+                        "id_usuario":3 <br>
+                    }</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">{<br>
+                        "message": "Se actualizó el mantenimiento "<br>
+                    }<br><br>                    
+                    Incorrecto:<br>
+                    •	Status: 400<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": "NO se actualizó el mantenimiento"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •	Status: 500<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }
+                                        
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h2>Ambiente</h2>
+    <h3>Registrar Ambiente</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">15</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Registrar Ambiente</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/ambiente/resgistrar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador registra ambientes en el sistema </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">POST</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json
+                        Authorization Bearer {TOKEN}</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">{
+                        "nombre":"Taller de tostion"
+                    }</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">
+                        {<br>
+                            "message": "Ambiente registrado con exito "<br>
+                        }<br><br>                    
+                        Incorrecto:<br>
+                        •	Status: 400<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": "No se registro el ambiente"<br>
+                        }<br><br>                    
+                        No autorizado:<br>
+                        •	Status: 500<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": " Error en el servidor"<br>
+                        }
+                           
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Listar Ambiente</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">16</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Listar todos los ambiente registrados</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/ambiente/listar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra listar todos los ambientes registrados en el sistema</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td"></td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador, usuarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">No aplica</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">
+                        { <br>
+                            "id_ambiente": 1, <br>
+                            "nombre": "y14"  <br>
+                        } <br>
+                        No autorizado:<br>
+                        •	Status: 500<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": " Error en listar ambiente"<br>
+                        }
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Actualizar ambiente</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">17</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td"> el usuario podra actualizar los datos de ambiente</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/ambiente/actualizar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra actualizar los datos de ambiente, el cual debe ser ingresado con su respectivo ID.</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Parameter: {id}<BR>
+                        Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">
+                        {<br>
+                            "nombre": "y14" <br>
+                        } <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">{<br>
+                        "message": "Se actualizó el ambiente con exito "<br>
+                    }<br><br>                    
+                    Incorrecto:<br>
+                    •	Status: 400<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": "NO se actualizó el ambiente"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •	Status: 500<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }
+                                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Area</h2>
+    <h3>Actualizar area</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">18</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Actualizar cualquier area que el usuario desee</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/area/actualizar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra actualizar una area, el cual debe ser ingresado con su respectivo ID.</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">PUT</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Parameter: {id}<BR>
+                        Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">
+                        { <br>
+                            "nombre":"Agroindustria" <br>
+                        } <br>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">{<br>
+                        "message": "Se actualizó el area con exito "<br>
+                    }<br><br>                    
+                    Incorrecto:<br>
+                    •	Status: 400<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": "NO se actualizó el area"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •	Status: 500<br>
+                    •	Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }
+                                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3>Buscar Ambiente</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">19</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Buscar Ambiente</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/ambiente/buscar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra buscar nuevos ambientes en el sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador y usuarios</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •  <br>
+                        • <br>
+                        { <br>
+                        <br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se encontro el ambiente"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Registrar Area</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">20</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Registrar Area</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/area/resgistrar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador registra areas en el sistema </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">POST</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json
+                        Authorization Bearer {TOKEN}</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">{
+                        "nombre":"Gastronomia"
+                    }</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">Correcto:<br>
+                        •	Status: 200<br>
+                        •	Body:
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td izq-bot"></td>
+                    <td class="sub-td der-bot">
+                        {<br>
+                            "message": "Area registrado con exito "<br>
+                        }<br><br>                    
+                        Incorrecto:<br>
+                        •	Status: 400<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": "No se registro el area"<br>
+                        }<br><br>                    
+                        No autorizado:<br>
+                        •	Status: 500<br>
+                        •	Body:<br>
+                        {<br>
+                            "message": " Error en el servidor"<br>
+                        }
+                           
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Buscar Area</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">21</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Buscar Area</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/area/buscar/:id</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El usuario podra buscar areas en el sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador y usuarios</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        •  <br>
+                        • <br>
+                        { <br>
+                        <br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se encontro el area"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+    <h3>Listar Area</h3>
+    <div class="table1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="main-td izq-up">Número</td>
+                    <td class="sub-td der-up">22</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Nombre del webservice</td>
+                    <td class="sub-td">Listar Area</td>
+                </tr>
+                <tr>
+                    <td class="main-td">URL</td>
+                    <td class="sub-td">localhost:4000/area/listar</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Descripción</td>
+                    <td class="sub-td">El administrador podra listar las areas registradas del sistema con los datos necesarios</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Verbo HTTP</td>
+                    <td class="sub-td">GET</td>
+                </tr>
+                <tr>
+                    <td class="main-td">Header</td>
+                    <td class="sub-td">Content-Type: application/json<br>
+                        Authorization Bearer {TOKEN}
+                        </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Usuarios</td>
+                    <td class="sub-td">Administrador</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="main-td">Request bodyform-data</td>
+                    <td class="sub-td">Correcto:<br>
+                        • 
+                        • 
+                        { <br>
+                        } <br>
+                         </td>
+                </tr>
+                <tr>
+                    <td class="main-td">Response</td>
+                    <td class="sub-td">
+                        <img src="/img/maquina.jpg" alt=""><br><br>
+                    Incorrecto:<br>
+                    •   Status: 404 Not Found<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": "No se Listo las areas"<br>
+                    }<br><br>                    
+                    No autorizado:<br>
+                    •   Status: 500 Internal Server Error<br>
+                    •   Body:<br>
+                    {<br>
+                        "message": " Error en el servidor"<br>
+                    }<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+    </div>
+
+</body>
+</html>
